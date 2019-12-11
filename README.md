@@ -1,20 +1,58 @@
 # Git for people new to Git :)
 
-Git is a popular version control system and is widely used
+Git is a popular version control system and is widely used.
 
 ## Repositories
 
-A repository is a collection of data (project) which is avaibale online
+A repository is a collection of data (project) which is avaibale online.
 
-To create a new repository on github use the github website
+To create a new repository on github use the github website.
 
-To pull (copy) a repository you can do this via http or SSL protocol
+To pull (copy) a repository you can do this via http or SSL protocol.
 
-SSL allows you to modify branches of the online repository without entering your github password while http does not
+SSL allows you to modify branches of the online repository without entering your github password while http does not.
+
+## Setup
+
+Setting up a local repository on your machine and connecting to a remote (online) branch is simple
+
+To initialize a branch simply navigate to your project directory and write the following
+
+′′′ cli
+git init
+′′′
+
+This created the .git file which stores your history, branches, etc.
+
+To save the files to git (track), first take a look at which files aren't tracked by typing
+
+′′′ cli
+git status
+′′′
+
+This will list all untracked files as red
+
+Now let's add all untracked files
+
+′′′ cli
+git add .
+′′′
+
+Finally we need to commit the tracked files to a local branch
+
+′′′ cli
+git commit -m "Create initial commit"
+′′′
+
+The commit message has a convention- It should describe what you are changing
+
+For instance "Add navbar"
 
 ## Branches
 
-Every repository has a master branch which usually has working code
+A branch is a seperate project version. Branches are created to implement different features. For instance you could have the "menu" branch which was created for developers to work on the menu.
+
+Every repository has a master branch which usually has working code.
 
 You can easily create a branch either via github or the cli by entering
 
@@ -34,7 +72,17 @@ To list your local branches type the following
 git branch
 ′′′
 
+To merge a branch, first checkout (switch to) the branch you want to merge to
 
+′′′ cli
+git checkout master
+′′′
+
+and then merge the branch
+
+′′′ cli
+git merge dev
+′′′
 
 ## Popular repositories
 
