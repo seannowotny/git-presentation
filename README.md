@@ -18,31 +18,31 @@ Setting up a local repository on your machine and connecting to a remote (online
 
 To initialize a branch simply navigate to your project directory and write the following
 
-′′′ cli
+``` cli
 git init
-′′′
+```
 
 This created the .git file which stores your history, branches, etc.
 
 To save the files to git (track), first take a look at which files aren't tracked by typing
 
-′′′ cli
+``` cli
 git status
-′′′
+```
 
 This will list all untracked files as red
 
 Now let's add all untracked files
 
-′′′ cli
+``` cli
 git add .
-′′′
+```
 
 Finally we need to commit the tracked files to a local branch
 
-′′′ cli
+``` cli
 git commit -m "Create initial commit"
-′′′
+```
 
 The commit message has a convention- It should describe what you are changing
 
@@ -56,33 +56,33 @@ Every repository has a master branch which usually has working code.
 
 You can easily create a branch either via github or the cli by entering
 
-′′′ cli
+``` cli
 git checkout -b new-branch-name
-′′′
+```
 
 Note that this branch only exists locally on your machine until you push (upload) it to the repository
 
-′′′ cli
+``` cli
 git push origin new-branch-name
-′′′
+```
 
 To list your local branches type the following
 
-′′′ cli
+``` cli
 git branch
-′′′
+```
 
 To merge a branch, first checkout (switch to) the branch you want to merge to
 
-′′′ cli
+``` cli
 git checkout master
-′′′
+```
 
 and then merge the branch
 
-′′′ cli
+``` cli
 git merge dev
-′′′
+```
 
 ## Popular repositories
 
