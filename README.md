@@ -46,7 +46,7 @@ git commit -m "Create initial commit"
 
 ## Commits
 
-### Commits are how we save changes made, together with a description of what changes we made
+### Commits are how we save changes. Every commit is privided with a description.
 
 The commit message has a convention- It should describe what you are changing and be in present tense
 
