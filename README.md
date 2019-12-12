@@ -107,7 +107,7 @@ git reset 973hkshf2 --hard
 If you made a mistake and want to sync your git up to the remote repository again simply type
 
 ``` cli
-git pull origin {your branch name}
+git pull origin branch-to-pull-to
 ```
 
 ## Stash
