@@ -4,7 +4,7 @@ Git is a popular version control system and is widely used.
 
 ## Repositories
 
-A repository is a collection of data (project) which is avaibale online.
+### A repository is a collection of data (project) which is avaibale online.
 
 To create a new repository on github use the github website.
 
@@ -46,9 +46,9 @@ git commit -m "Create initial commit"
 
 ## Commits
 
-Commits are how we save changes made with a description of what we changed
+### Commits are how we save changes made, together with a description of what changes we made
 
-The commit message has a convention- It should describe what you are changing
+The commit message has a convention- It should describe what you are changing and be in present tense
 
 For instance
 
@@ -82,7 +82,7 @@ When in doubt use both checkout -- and reset
 
 ## Stash
 
-Stashes are the little brother of commits. They are like quicksaves you can go back to later. They are usable and visible locally only.
+### Stashes are the little brother of commits. They are like quicksaves you can go back to later. They are usable and visible locally only.
 
 Be careful though! Stashes don't save file deletions or file creation, only file modifications; so their use is very limited.
 
@@ -122,7 +122,7 @@ git stash drop stash@{0}
 
 ## Branches
 
-A branch is a seperate project version. Branches are created to implement different features. For instance you could have the "menu" branch which was created for developers to work on the menu.
+### A branch is a seperate project version. Branches are created to implement different features. For instance you could have the "menu" branch which was created for developers to work on the menu.
 
 Every repository has a master branch which usually has working code.
 
@@ -173,7 +173,7 @@ git remote add origin git@github.com:seannowotny/laravel-pj-first-project.git
 git push -u origin master
 
 
-### More git commands
+## More git commands
 
 ``` cli
 Git rebase other-branch
