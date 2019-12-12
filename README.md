@@ -44,9 +44,81 @@ Finally we need to commit the tracked files to a local branch
 git commit -m "Create initial commit"
 ```
 
+## Commits
+
+Commits are how we save changes made with a description of what we changed
+
 The commit message has a convention- It should describe what you are changing
 
-For instance "Add navbar"
+For instance
+
+``` cli
+git commit -m "Add navbar"
+```
+
+If you havent uploaded your changes yet (pushed) you can add to your previous commit afterwards
+
+``` cli
+git commit --amend
+```
+
+This will prompt you to change the commit message (optional)
+
+Ammending can come in handy if you aren't finished with your commit yet but want to be able to go back to the current state of your application in case you make a mistake
+
+To undo locally committed changes:
+
+``` cli
+git checkout -- dist/404.html
+```
+
+To unstage staged changes:
+
+``` cli
+git reset dist/404.html
+```
+
+When in doubt use both checkout -- and reset
+
+## Stash
+
+Stashes are the little brother of commits. They are like quicksaves you can go back to later. They are usable and visible locally only.
+
+Be careful though! Stashes don't save file deletions or file creation, only file modifications; so their use is very limited.
+
+When in doubt create a work-in-progress commit and use commit --amend later instead of using stashes
+
+To create a stash write this
+
+``` cli
+git stash
+```
+
+Don't be suprised stashes delete your modifications but retain them aswell
+
+To apply your lastest stash type the following
+
+``` cli
+git stash apply
+```
+
+To list all your stashes write this
+
+``` cli
+git stash list
+```
+
+and to apply a particular stash type this
+
+``` cli
+git stash apply stash@{0}
+```
+
+and to delete a stash write this
+
+``` cli
+git stash drop stash@{0}
+```
 
 ## Branches
 
@@ -81,7 +153,13 @@ git checkout master
 and then merge the branch
 
 ``` cli
-git merge dev
+git merge some-feature
+```
+
+To delete the merged branch write this
+
+``` cli
+git branch -d some-feature
 ```
 
 ## Popular repositories
@@ -95,88 +173,31 @@ git remote add origin git@github.com:seannowotny/laravel-pj-first-project.git
 git push -u origin master
 
 
+### More git commands
 
-Git init
-
-Git add .
-
-Git commit -m
-
-git commit --amend --no-edit
-
-Git push origin master
-
-Git checkout other-branch
-
-Git checkout -b my-new-branch
-
-Git merge other-branch
-
+``` cli
 Git rebase other-branch
+```
 
-Git clone
+``` cli
+Git remote set-url origin
+```
 
-Git remote set-url origin ...
+Show difference between commits
 
-
-
+``` cli
 Git diff asd896ui 978asdf
+```
 
-Git show HEAD^
+Show commits in graph
 
+``` cli
 git log --oneline --graph --author="lalorosas" --grep=#2 --since=1.hour
-
-Git annotate my_file
-
+```
 
 
-git checkout -- dist/404.html		//Undo unstaged changes
+Selectively merge certain commits
 
-git reset dist/404.html			//Undo staged changes
-
-git checkout HEAD^ dist/404.html	//Undo pushed changes
-
-git checkout -B add-bootstrap		//Set branch to HEAD position
-
-
-
-git clean -fX
-
-git clean -fd
-
-
-
-git fetch
-
-git checkout --track origin/test
-
-
-
-git branch -d add-bootstrap
-
-
-
-git tag -a v1.0 12asd6hk "First Public Release"
-
-git push origin --tags
-
-
-
+``` cli
 git cherry-pick as3h5 ag5h jkl5j
-
-
-
-from google.colap import drive
-
-drive.mount('/content/drive')
-
-
-git stash --include-untracked save "Worked on add function"
-
-git stash apply stash@{0}
-
-// Undo stash apply
-
-$ git stash show -p stash@{0} | git apply -R
-
-git stash drop stash@{0}
+```
