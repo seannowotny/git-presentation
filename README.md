@@ -1,4 +1,4 @@
-# Git for people new to Git :)
+# Git presentation for people new to Git
 
 ### Git is a popular version control system and is widely used.
 
