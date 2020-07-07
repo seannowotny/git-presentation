@@ -118,19 +118,21 @@ Be careful though! Stashes don't save file deletions or file creation, only file
 
 When in doubt create a work-in-progress commit and use commit --amend later instead of using stashes
 
-To create a stash write this
+To create a stash first add all your changes with git add... and then write this
 
 ``` cli
 git stash
 ```
 
-Don't be suprised stashes delete your modifications but retain them aswell
+Don't be suprised, stashes delete your modifications but retain them aswell
 
-To apply your lastest stash type the following
+To apply your lastest stash, type the following
 
 ``` cli
 git stash apply
 ```
+
+In the case you stashed without adding your changes, unexpected results will ensue, so just apply your incorrect stash and stash again
 
 To list all your stashes write this
 
